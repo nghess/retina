@@ -7,11 +7,11 @@ Average Blur: A sanity check
 
 c_sz = 512  # Canvas size
 k_sz = 31  # Kernel size
-kernel = np.ones([k_sz, k_sz]) * (1 / k_sz**2)  # Averaging kernel
+kernel = np.ones([k_sz, k_sz]) * (1/k_sz**2)  # Averaging kernel
 
 # Initialize canvas and draw something
 canvas = np.zeros([c_sz, c_sz], dtype=np.uint8)
-cv2.circle(canvas, (c_sz // 2, c_sz // 2), 51, (255), -1)
+cv2.circle(canvas, (c_sz//2, c_sz//2), 51, (255), -1)
 
 # Pad Canvas for kernel
 padded_canvas = np.pad(canvas, ((k_sz//2, k_sz//2), (k_sz//2, k_sz//2)), mode='constant', constant_values=0)

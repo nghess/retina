@@ -34,7 +34,7 @@ kernel = generate_gaussian_kernel(k_sz, k_sz/3)
 
 # Initialize canvas and draw something
 canvas = np.zeros([c_sz, c_sz], dtype=np.uint8)
-cv2.circle(canvas, (c_sz // 2, c_sz // 2), 51, (255), -1)
+cv2.circle(canvas, (c_sz//2, c_sz//2), 51, (255), -1)
 
 # Pad Canvas for kernel
 padded_canvas = np.pad(canvas, ((k_sz//2, k_sz//2), (k_sz//2, k_sz//2)), mode='constant', constant_values=0)
@@ -48,5 +48,5 @@ for x in range(c_sz):
         output[x, y] = np.sum(padded_canvas[x:x+k_sz, y:y+k_sz] * kernel)
 
 # Display blurred image
-cv2.imshow("avg blur", output)
+cv2.imshow("gaussian blur", output)
 cv2.waitKey(0)
