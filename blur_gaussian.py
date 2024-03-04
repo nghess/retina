@@ -29,7 +29,7 @@ def generate_gaussian_kernel(k_size, sigma):
     return kernel
 
 c_sz = 512  # Canvas size
-k_sz = 31  # Kernel size
+k_sz = 5  # Kernel size
 kernel = generate_gaussian_kernel(k_sz, k_sz/3)
 
 # Initialize canvas and draw something

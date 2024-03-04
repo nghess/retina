@@ -6,7 +6,7 @@ Average Blur: A sanity check
 """
 
 c_sz = 512  # Canvas size
-k_sz = 31  # Kernel size
+k_sz = 15  # Kernel size
 kernel = np.ones([k_sz, k_sz]) * (1/k_sz**2)  # Averaging kernel
 
 # Initialize canvas and draw something
@@ -27,3 +27,4 @@ for x in range(c_sz):
 # Display blurred image
 cv2.imshow("avg blur", output)
 cv2.waitKey(0)
+
